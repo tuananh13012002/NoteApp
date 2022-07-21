@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_gravity="center"
+    android:orientation="vertical"
+    android:id="@+id/layoutDeleteContainer"
+    android:layout_margin="10dp"
+    android:background="@drawable/bg_dialog_add_url"
+    android:layout_height="wrap_content">
+    <LinearLayout
+        android:padding="10dp"
+        android:id="@+id/layoutDeleteNote"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <ImageView
+            android:src="@drawable/ic_baseline_delete_24"
+            android:layout_width="30dp"
+            android:layout_height="30dp"/>
+        <TextView
+            android:text="Delete Note"
+            android:fontFamily="@font/ubuntu_medium"
+            android:textColor="@color/white"
+            android:textSize="16sp"
+            android:layout_marginStart="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+    </LinearLayout>
+   <TextView
+       android:layout_marginBottom="10dp"
+       android:layout_marginEnd="10dp"
+       android:text="Are you sure you want to delete this note?"
+       android:layout_width="match_parent"
+       android:layout_marginStart="25dp"
+       android:textColor="@color/white"
+       android:fontFamily="@font/ubuntu_regular"
+       android:textSize="16sp"
+       android:layout_height="wrap_content"/>
+    <LinearLayout
+        android:orientation="horizontal"
+        android:padding="10dp"
+        android:gravity="end"
+        android:layout_marginBottom="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:id="@+id/txtCancel"
+            android:text="CANCEL"
+            android:fontFamily="@font/ubuntu_medium"
+            android:textColor="#FFC107"
+            android:layout_marginEnd="15dp"
+            android:textSize="16sp"
+            android:layout_marginStart="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+        <TextView
+            android:text="DELETE NOTE"
+            android:id="@+id/txtDelete"
+            android:fontFamily="@font/ubuntu_medium"
+            android:textColor="@color/color3"
+            android:textSize="16sp"
+            android:layout_marginEnd="15dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+    </LinearLayout>
+</LinearLayout>

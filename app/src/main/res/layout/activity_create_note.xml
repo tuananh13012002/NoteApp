@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg"
+    tools:context=".View.CreateNoteActivity">
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:padding="15dp"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:id="@+id/imgBack"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="5dp"
+                    android:src="@drawable/ic_baseline_arrow_back_ios_24"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <ImageView
+                    android:id="@+id/imgSave"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+
+                    android:padding="5dp"
+                    android:src="@drawable/ic_baseline_check_circle_outline_24"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <EditText
+                android:fontFamily="@font/ubuntu_bold"
+                android:textColor="@color/white"
+                android:inputType="text"
+                android:id="@+id/edNoteTitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:background="@android:color/transparent"
+                android:hint="Note Title"
+                android:paddingTop="10dp"
+                android:paddingBottom="10dp"
+                android:textColorHint="#AAAAAA" />
+            <TextView
+                android:layout_marginTop="5dp"
+                android:layout_width="match_parent"
+                android:textSize="13sp"
+                android:id="@+id/txtDateTime"
+                android:fontFamily="@font/ubuntu_regular"
+                android:textColor="#AAAAAA"
+                android:layout_height="wrap_content"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:id="@+id/viewSubtitleIndicator"
+                    android:layout_width="10dp"
+                    android:orientation="vertical"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/bg_search" />
+
+                <EditText
+                    android:fontFamily="@font/ubuntu_medium"
+                    android:textColor="@color/white"
+                    android:inputType="text"
+                    android:id="@+id/edNoteSubTitle"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="10dp"
+                    android:background="@android:color/transparent"
+                    android:hint="Note Subtitle"
+                    android:textColorHint="#AAAAAA"
+                    android:textSize="15sp" />
+            </LinearLayout>
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <ImageView
+                    android:id="@+id/imgNote"
+                    android:layout_marginStart="12dp"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginEnd="12dp"
+                    android:layout_marginBottom="15dp"
+                    android:adjustViewBounds="true"
+                    android:visibility="gone"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"/>
+                <ImageView
+                    android:layout_gravity="end"
+                    android:id="@+id/imgRemoveImgNote"
+                    android:background="@drawable/bg_delete"
+                    android:src="@drawable/ic_baseline_delete_24"
+                    android:layout_marginTop="17dp"
+                    android:layout_marginEnd="15dp"
+                    android:layout_width="30dp"
+                    android:scaleType="centerCrop"
+                    android:padding="4dp"
+                    android:visibility="gone"
+                    android:layout_height="30dp"/>
+            </FrameLayout>
+
+            <LinearLayout
+                android:id="@+id/layoutWebURL"
+                android:orientation="horizontal"
+                android:layout_marginStart="12dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginEnd="12dp"
+                android:gravity="center_vertical"
+                android:visibility="gone"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                tools:ignore="UseCompoundDrawables">
+                <TextView
+                    android:id="@+id/textWebUrl"
+                    android:layout_weight="1"
+                    android:autoLink="web"
+                    android:textSize="14sp"
+                    android:fontFamily="@font/ubuntu_regular"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"/>
+                <ImageView
+                    android:tint="@color/color3"
+                    android:src="@drawable/ic_baseline_delete_24"
+                    android:id="@+id/imgRemoveWebURL"
+                    android:layout_width="30dp"
+                    android:scaleType="centerCrop"
+                    android:layout_height="30dp"/>
+            </LinearLayout>
+            <EditText
+                android:fontFamily="@font/ubuntu_regular"
+                android:textColor="@color/white"
+                android:inputType="textMultiLine"
+                android:id="@+id/edNoteType"
+                android:layout_marginTop="15dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@android:color/transparent"
+                android:hint="Type notes here"
+                android:padding="10dp"
+                android:minHeight="150dp"
+                android:gravity="top"
+                android:textColorHint="#7C7C7C"
+                android:textSize="13sp" />
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+   <include layout="@layout/layout_color_board"/>
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
